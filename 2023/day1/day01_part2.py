@@ -1,6 +1,6 @@
 import pathlib
 
-with pathlib.Path("day01.txt").open("r") as file:
+with pathlib.Path("2023/day1/day01.txt").open("r") as file:
     res = 0
     for line in file.readlines():
         line = line.strip()
