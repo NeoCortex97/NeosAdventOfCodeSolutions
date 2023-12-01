@@ -7,4 +7,4 @@ for directory in filter(lambda item: item.is_dir(), pathlib.Path(".").iterdir())
             for script in filter(lambda item: item.is_file() and item.suffix.startswith(".py"), day.iterdir()):
                 proc = subprocess.Popen(f'python3 {script}'.split(" "), stdout= subprocess.PIPE)
                 out, _ = proc.communicate()
-                print(day, out.decode("utf-8").rstrip())
+                print(script, out.decode("utf-8").rstrip())
