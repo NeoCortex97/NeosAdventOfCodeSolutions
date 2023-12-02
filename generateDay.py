@@ -7,7 +7,8 @@ lines = [
     "import pathlib",
     "",
     'with pathlib.Path(__file__).parent.joinpath("input.txt").open("r") as file:',
-    "    pass",
+    "    for line in [l.strip() for l in file.readlines()]:"
+    "        pass",
     "",
 ]
 
@@ -35,3 +36,5 @@ if __name__ == "__main__":
             with part_path.open("w") as file:
                 for line in lines:
                     file.write(line + "\n")
+
+    os.system(f'git add {day_path}')
