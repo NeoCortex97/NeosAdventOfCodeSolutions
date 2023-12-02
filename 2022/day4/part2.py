@@ -30,6 +30,6 @@ with pathlib.Path(__file__).parent.joinpath("input.txt").open("r") as file:
         overlapping = partially_overlaps(pair[0], pair[1])
         # print(pair[0], pair[1], partially_overlaps(pair[0], pair[1]))
         if overlapping:
-            print(pair[0], pair[1])
+            # print(pair[0], pair[1])
             count += 1
 print(count)
