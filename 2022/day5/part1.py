@@ -75,7 +75,7 @@ with pathlib.Path(__file__).parent.joinpath("input.txt").open("r") as file:
         moves.append(l)
 
     area = parse_config(config)
-    print_area(area)
+    # print_area(area)
     procedure = parse_moves(moves)
     for move in procedure:
         for _ in range(move.amount):
