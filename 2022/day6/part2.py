@@ -7,7 +7,7 @@ with pathlib.Path(__file__).parent.joinpath("input.txt").open("r") as file:
             sig += char
             if len(sig) > 14:
                 sig = sig[1:]
-                print(f'{len(set(sig)):>2}', sig, set(sig))
+                # print(f'{len(set(sig)):>2}', sig, set(sig))
             # print(sig, set(sig))
             if len(set(sig)) >= 14:
                 print(index + 1)
