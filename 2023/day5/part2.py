@@ -39,17 +39,18 @@ with pathlib.Path(__file__).parent.joinpath("input.txt").open("r") as file:
 
 print("seed soil")
 for rng in zip(*[iter(seeds)] * 2):
-    for offset in range(rng[1]):
-        seed = rng[0] + offset
-        soil: int = lookup(seed, maps["seed-to-soil"])
-        fertilizer: int = lookup(soil, maps["soil-to-fertilizer"])
-        water: int = lookup(fertilizer, maps["fertilizer-to-water"])
-        light: int = lookup(water, maps["water-to-light"])
-        temperature: int = lookup(light, maps["light-to-temperature"])
-        humidity: int = lookup(temperature, maps["temperature-to-humidity"])
-        location: int = lookup(humidity, maps["humidity-to-location"])
-        locations.append(location)
+    offset = 0
+    # for offset in range(rng[1]):
+    seed = rng[0] + offset
+    soil: int = lookup(seed, maps["seed-to-soil"])
+    fertilizer: int = lookup(soil, maps["soil-to-fertilizer"])
+    water: int = lookup(fertilizer, maps["fertilizer-to-water"])
+    light: int = lookup(water, maps["water-to-light"])
+    temperature: int = lookup(light, maps["light-to-temperature"])
+    humidity: int = lookup(temperature, maps["temperature-to-humidity"])
+    location: int = lookup(humidity, maps["humidity-to-location"])
+    locations.append(location)
 
-        print(seed, soil, fertilizer, water, light, temperature, humidity)
+    print(seed, soil, fertilizer, water, light, temperature, humidity)
 
 print(sorted(locations, reverse=True))
