@@ -51,6 +51,6 @@ for rng in zip(*[iter(seeds)] * 2):
     location: int = lookup(humidity, maps["humidity-to-location"])
     locations.append(location)
 
-    print(seed, soil, fertilizer, water, light, temperature, humidity)
+    # print(seed, soil, fertilizer, water, light, temperature, humidity)
 
 print(sorted(locations, reverse=True))

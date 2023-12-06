@@ -33,7 +33,7 @@ def test_span(prv, crnt, nxt, span) -> int:
     # print(top)
     # print(crnt[span[0] - 1: span[1] + 1])
     # print(bottom)
-    print(space, space.replace(".", ""), len(space.replace(".", "")))
+    # print(space, space.replace(".", ""), len(space.replace(".", "")))
 
     return len(space.replace(".", ""))
 

@@ -36,7 +36,7 @@ with pathlib.Path(__file__).parent.joinpath("input.txt").open("r") as file:
                 "len": length,
             })
 
-print("seed soil")
+# print("seed soil")
 for seed in seeds:
     soil: int = lookup(seed, maps["seed-to-soil"])
     fertilizer: int = lookup(soil, maps["soil-to-fertilizer"])
@@ -47,7 +47,7 @@ for seed in seeds:
     location: int = lookup(humidity, maps["humidity-to-location"])
     locations.append(location)
 
-    print(seed, soil, fertilizer, water, light, temperature, humidity)
+    # print(seed, soil, fertilizer, water, light, temperature, humidity)
 
 
 print(sorted(locations))
