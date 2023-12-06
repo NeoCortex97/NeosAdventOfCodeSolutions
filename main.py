@@ -5,7 +5,7 @@ for directory in sorted(filter(lambda item: item.is_dir(), pathlib.Path(".").ite
     if directory.name[0].isdigit():
         print(f'{directory.name}:')
         for day in sorted(filter(lambda item: item.is_dir(), directory.iterdir())):
-            print(f'  {day.name}:')
+            print(f'  {day.name}:', flush=True)
             for script in sorted(filter(lambda item: item.is_file() and item.suffix.startswith(".py"), day.iterdir())):
                 proc = subprocess.Popen(f'python3 {script}'.split(" "), stdout= subprocess.PIPE)
                 out, _ = proc.communicate()
